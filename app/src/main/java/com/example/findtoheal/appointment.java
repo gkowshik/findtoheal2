@@ -1,5 +1,6 @@
 package com.example.findtoheal;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -39,6 +40,8 @@ public class appointment extends AppCompatActivity {
                     // If the input is empty, display an error toast
                     Toast.makeText(appointment.this, "Please enter a date", Toast.LENGTH_SHORT).show();
                 }
+                Intent intent = new Intent(appointment.this, SuccessActivity.class);
+                startActivity(intent);
             }
         });
     }
